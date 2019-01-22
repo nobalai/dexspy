@@ -25,3 +25,10 @@ hs_err_pid*
 # bazel
 bazel-*
 .project
+
+.gradle
+.idea
+out
+.DS_Store
+
+*.iml
