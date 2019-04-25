@@ -1,5 +1,6 @@
 package com.bowen.dex;
 
+// TODO: Add generic type 
 public abstract class DexComponent {
 
     private int offset;

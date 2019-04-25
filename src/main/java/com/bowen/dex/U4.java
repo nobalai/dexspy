@@ -8,4 +8,8 @@ public class U4 extends DexComponent {
     public void readContent(DexReader dexReader) {
         value = dexReader.getByteBuffer().getInt();
     }
+
+    public int get() {
+        return value;
+    }
 }
