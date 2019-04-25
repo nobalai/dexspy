@@ -1,7 +1,5 @@
 package com.bowen.dex;
 
-import java.nio.ByteBuffer;
-
 public abstract class DexComponent {
 
     private int offset;
@@ -21,11 +19,11 @@ public abstract class DexComponent {
         return length;
     }
 
-    public void read(ByteBuffer byteBuffer) {
-        offset = byteBuffer.position();
-        readContent(byteBuffer);
-        length = byteBuffer.position() - offset;
+    public void read(DexReader dexReader) {
+        offset = dexReader.position();
+        readContent(dexReader);
+        length = dexReader.position() - offset;
     }
 
-    public abstract void readContent(ByteBuffer byteBuffer);
+    public abstract void readContent(DexReader dexReader);
 }

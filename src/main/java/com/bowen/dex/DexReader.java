@@ -10,9 +10,17 @@ public class DexReader {
         this.byteBuffer = byteBuffer;
     }
 
+    public int position() {
+        return byteBuffer.position();
+    }
+
+    public ByteBuffer getByteBuffer() {
+        return byteBuffer;
+    }
+
     public U1 readU1() {
         U1 u1 = new U1();
-        u1.read(byteBuffer);
+        u1.read(this);
         return u1;
     }
 
@@ -26,13 +34,13 @@ public class DexReader {
 
     public U2 readU2() {
         U2 u2 = new U2();
-        u2.read(byteBuffer);
+        u2.read(this);
         return u2;
     }
 
     public U4 readU4() {
         U4 u4 = new U4();
-        u4.read(byteBuffer);
+        u4.read(this);
         return u4;
     }
 }
